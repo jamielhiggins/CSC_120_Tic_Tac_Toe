@@ -1,21 +1,35 @@
+board1 = [[0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]]
 
 
-def main():
-    board1 = [[0, 0, 0],
-             [0, 0, 0],
-             [0, 0, 0]]
-    print_board(board1)
 
-def print_board(board):
-    for row in board:
+def print_board():
+    for row in board1:
         print(row)
 
-#validating function that checks if the mark can be placed
-#def check_mark():
 
-#places a mark on the board
-#def place_mark():
+def place_mark():
+    print_board()
 
-#def check_win():
+    #player_turn()
 
-main()
+
+def player_turn():
+    move = input("Enter you selection : ")
+    move = int(move)
+
+    for i in board1:
+        if board1[move] == len(board1):
+            board1[move] = 'X'
+    print_board()
+
+
+#            len(board1) == move:
+ #           board1[] = 'X'
+ #       elif len(board1) == 'O':
+ #           print("Invalid move")
+ #           continue
+
+
+place_mark()
